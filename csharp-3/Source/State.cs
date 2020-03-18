@@ -8,12 +8,13 @@ namespace Codenation.Challenge
         {
             this.Name = name;
             this.Acronym = acronym;
+            //this.Area = area;
         }
 
         public string Name { get; set; }
 
         public string Acronym { get; set; }
-
+        //public double Area { get; set; }
     }
 
 }
