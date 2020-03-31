@@ -6,7 +6,6 @@ C:\Users\Carla\codenation\csharp-7\Source\bin\Debug\netcoreapp2.2\Source.runtime
 C:\Users\Carla\codenation\csharp-7\Source\bin\Debug\netcoreapp2.2\Source.runtimeconfig.dev.json
 C:\Users\Carla\codenation\csharp-7\Source\bin\Debug\netcoreapp2.2\Source.dll
 C:\Users\Carla\codenation\csharp-7\Source\bin\Debug\netcoreapp2.2\Source.pdb
-C:\Users\Carla\codenation\csharp-7\Source\obj\Debug\netcoreapp2.2\Source.csprojAssemblyReference.cache
 C:\Users\Carla\codenation\csharp-7\Source\obj\Debug\netcoreapp2.2\Source.RazorAssemblyInfo.cache
 C:\Users\Carla\codenation\csharp-7\Source\obj\Debug\netcoreapp2.2\Source.RazorAssemblyInfo.cs
 C:\Users\Carla\codenation\csharp-7\Source\obj\Debug\netcoreapp2.2\Source.AssemblyInfoInputs.cache
@@ -14,3 +13,4 @@ C:\Users\Carla\codenation\csharp-7\Source\obj\Debug\netcoreapp2.2\Source.Assembl
 C:\Users\Carla\codenation\csharp-7\Source\obj\Debug\netcoreapp2.2\Source.RazorTargetAssemblyInfo.cache
 C:\Users\Carla\codenation\csharp-7\Source\obj\Debug\netcoreapp2.2\Source.dll
 C:\Users\Carla\codenation\csharp-7\Source\obj\Debug\netcoreapp2.2\Source.pdb
+C:\Users\Carla\codenation\csharp-7\Source\obj\Debug\netcoreapp2.2\Source.csprojAssemblyReference.cache

@@ -18,9 +18,3 @@ C:\Users\Carla\codenation\csharp-7\Source.Test\obj\Debug\netcoreapp2.2\Source.Te
 C:\Users\Carla\codenation\csharp-7\Source.Test\obj\Debug\netcoreapp2.2\Source.Test.csproj.CopyComplete
 C:\Users\Carla\codenation\csharp-7\Source.Test\obj\Debug\netcoreapp2.2\Source.Test.dll
 C:\Users\Carla\codenation\csharp-7\Source.Test\obj\Debug\netcoreapp2.2\Source.Test.pdb
-C:\Users\Carla\codenation\csharp-7\Source.Test\bin\Debug\netcoreapp2.2\Source.Test.dll.config
-C:\Users\Carla\codenation\csharp-7\Source.Test\bin\Debug\netcoreapp2.2\Microsoft.Data.Tools.Schema.Sql.dll
-C:\Users\Carla\codenation\csharp-7\Source.Test\bin\Debug\netcoreapp2.2\Microsoft.Data.Tools.Schema.Sql.UnitTesting.dll
-C:\Users\Carla\codenation\csharp-7\Source.Test\bin\Debug\netcoreapp2.2\Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter.dll
-C:\Users\Carla\codenation\csharp-7\Source.Test\bin\Debug\netcoreapp2.2\Microsoft.Data.Tools.Utilities.dll
-C:\Users\Carla\codenation\csharp-7\Source.Test\bin\Debug\netcoreapp2.2\Microsoft.SqlServer.TransactSql.ScriptDom.dll

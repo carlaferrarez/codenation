@@ -19,23 +19,23 @@ namespace Codenation.Challenge.Models
 
         [Column("user_id")]
         [Required]
-        public int User_id { get; set; }
+        public int Userid { get; set; }
 
-        [ForeignKey("user_id")]
+        [ForeignKey("Userid")]
         public virtual User Users { get; set; }
 
         [Column("acceleration_id")]
         [Required]
-        public int Acceleration_id { get; set; }
+        public int Accelerationid { get; set; }
 
-        [ForeignKey("acceleration_id")]
+        [ForeignKey("Accelerationid")]
         public virtual Acceleration Accelerations { get; set; }
 
         [Column("company_id")]
         [Required]
-        public int Company_id { get; set; }
+        public int Companyid { get; set; }
 
-        [ForeignKey("company_id")]
+        [ForeignKey("Companyid")]
         public virtual Company Companies { get; set; }
 
     }

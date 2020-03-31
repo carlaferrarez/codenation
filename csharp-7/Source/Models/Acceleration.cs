@@ -9,9 +9,9 @@ namespace Codenation.Challenge.Models
     [Table("acceleration")]
     public class Acceleration
     {
+        [Key]
         [Column("id")]
         [Required]
-        [Key]
         public int Id { get; set; }
 
         [Column("name")]
@@ -30,9 +30,9 @@ namespace Codenation.Challenge.Models
 
         [Column("challenge_id")]
         [Required]
-        public int Challenge_id { get; set; }
+        public int Challengeid { get; set; } // foreign key
 
-        [ForeignKey("challenge_id")]
+        [ForeignKey("Challengeid")]
         public virtual Challenge Challenges { get; set; }
 
         public virtual ICollection<Candidate> Candidates { get; set; }

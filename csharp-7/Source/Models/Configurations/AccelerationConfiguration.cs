@@ -7,7 +7,7 @@ namespace Codenation.Challenge.Models.Configurations
     {
         public void Configure(EntityTypeBuilder<Acceleration> builder)
         {
-            builder.HasKey(x => x.Challenge_id);
+            builder.HasKey(x => x.Challengeid);
         }
     }
 }

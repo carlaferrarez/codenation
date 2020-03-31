@@ -7,7 +7,7 @@ namespace Codenation.Challenge.Models.Configurations
     {
         public void Configure(EntityTypeBuilder<Submission> builder)
         {
-            builder.HasKey(x => new { x.Challenge_id, x.User_id });
+            builder.HasKey(x => new { x.Challengeid, x.Userid });
         }
     }
 }

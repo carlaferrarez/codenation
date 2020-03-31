@@ -19,9 +19,10 @@ namespace Codenation.Challenge.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new AccelerationConfiguration());
+            //modelBuilder.ApplyConfiguration(new AccelerationConfiguration());
             modelBuilder.ApplyConfiguration(new SubmissionConfiguration());
             modelBuilder.ApplyConfiguration(new CandidateConfiguration());
+
         }
     }
 }

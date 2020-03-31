@@ -11,7 +11,7 @@ namespace Codenation.Challenge.Models
 
         [Column("score", TypeName = "decimal(9,2)")]
         [Required]
-        public double Status { get; set; }
+        public decimal Score { get; set; }
 
         [Column("created_at")]
         [Required]
@@ -19,16 +19,16 @@ namespace Codenation.Challenge.Models
 
         [Column("user_id")]
         [Required]
-        public int User_id { get; set; }
+        public int Userid { get; set; }
 
-        [ForeignKey("user_id")]
+        [ForeignKey("Userid")]
         public virtual User Users { get; set; }
 
         [Column("challenge_id")]
         [Required]
-        public int Challenge_id { get; set; }
+        public int Challengeid { get; set; }
 
-        [ForeignKey("challenge_id")]
+        [ForeignKey("Challengeid")]
         public virtual Challenge Challenges { get; set; }
 
 
