@@ -28,6 +28,7 @@
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.EntityFrameworkCore.Design": "2.2.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.6",
+          "Microsoft.EntityFrameworkCore.Tools": "2.2.6",
           "Microsoft.NETCore.App": "2.2.0"
         },
         "runtime": {
@@ -114,6 +115,11 @@
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/2.2.6": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "2.2.6"
         }
       },
       "Remotion.Linq/2.2.0": {
@@ -403,7 +409,7 @@
           "Microsoft.EntityFrameworkCore.InMemory": "2.2.0",
           "Microsoft.EntityFrameworkCore.Relational": "2.2.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.6",
-          "Microsoft.EntityFrameworkCore.Tools": "2.2.0",
+          "Microsoft.EntityFrameworkCore.Tools": "2.2.6",
           "Microsoft.Extensions.Caching.Abstractions": "2.2.0",
           "Microsoft.Extensions.Caching.Memory": "2.2.0",
           "Microsoft.Extensions.Caching.SqlServer": "2.2.0",
@@ -1591,12 +1597,6 @@
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.InMemory.dll": {}
-        },
-        "compileOnly": true
-      },
-      "Microsoft.EntityFrameworkCore.Tools/2.2.0": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "2.2.6"
         },
         "compileOnly": true
       },
@@ -3360,6 +3360,13 @@
       "path": "microsoft.entityframeworkcore.sqlserver/2.2.6",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.2.2.6.nupkg.sha512"
     },
+    "Microsoft.EntityFrameworkCore.Tools/2.2.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-L6vi+eT++Q+2jSIWtOB1LD4yB4dR1nQrWg/Wx1kArPo0rD8D9R4uD6LU5OFz3U/ibjADxLgmQmYDqjusrOI7SA==",
+      "path": "microsoft.entityframeworkcore.tools/2.2.6",
+      "hashPath": "microsoft.entityframeworkcore.tools.2.2.6.nupkg.sha512"
+    },
     "Remotion.Linq/2.2.0": {
       "type": "package",
       "serviceable": true,
@@ -4150,13 +4157,6 @@
       "sha512": "sha512-WxvRXUwCGdY1Ze8GfZteWadsxrxpFRfZN8WJ1jcXZKp5eYo5WwmiBq5e3xIZR8cHxznqlqczJ3NpXjqyYpNK9w==",
       "path": "microsoft.entityframeworkcore.inmemory/2.2.0",
       "hashPath": "microsoft.entityframeworkcore.inmemory.2.2.0.nupkg.sha512"
-    },
-    "Microsoft.EntityFrameworkCore.Tools/2.2.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-F253CmzpL7eXFKpK++/GIVbyVMZyXYq388osdkggsA1eL7c8ZGwHho0jE3LGA+L6WuXm6KbwQMtnt15zZAqzzA==",
-      "path": "microsoft.entityframeworkcore.tools/2.2.0",
-      "hashPath": "microsoft.entityframeworkcore.tools.2.2.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/2.2.0": {
       "type": "package",
