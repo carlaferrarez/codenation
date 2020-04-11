@@ -15,14 +15,39 @@ namespace Codenation.Challenge.Services
             this._randomService = randomService;
         }
 
+        // frases aleatorias
+        // retorna o quote inteiro
+        // dentro do random integer, preciso saber o máximo de quotes que posso ter, para adicionar o parametro max
+
         public Quote GetAnyQuote()
+
         {
-            throw new System.NotImplementedException();
+            var query = _context.Quotes.ToList();
+
+            if (query.Count() == 0)
+                return null;
+
+            int aleatorio = _randomService.RandomInteger(query.Count());
+
+            var result = query.Skip(aleatorio).FirstOrDefault();
+            return result;
         }
 
+        // frases aleatorias de um ator em especifico
         public Quote GetAnyQuote(string actor)
         {
-            throw new System.NotImplementedException();
+            var query = _context.Quotes.ToList();
+
+            if (query.Count() == 0)
+                return null;
+
+            int aleatorio = _randomService.RandomInteger(query.Count());
+
+            var result = query.Where(x => x.Actor == actor).Skip(aleatorio).FirstOrDefault();
+
+            if (result != null)
+                return result;
+            return null;
         }
     }
 }

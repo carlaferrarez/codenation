@@ -3,11 +3,37 @@ using System.Collections.Generic;
 using Xunit;
 using Codenation.Challenge.Models;
 using Codenation.Challenge.Services;
+using System.Linq;
 
 namespace Codenation.Challenge
 {
     public class UserServiceTest
     {
+        private CodenationContext _contexto;
+        private FakeContext _contextoFake { get; }
+        private UserService _userService;
+
+        public UserServiceTest()
+        {
+            _contextoFake = new FakeContext("UserTest");
+            _contextoFake.FillWithAll();
+
+            _contexto = new CodenationContext(_contextoFake.FakeOptions);
+            _userService = new UserService(_contexto);
+        
+        }
+
+        [Fact]
+        public void Should_Return_Right_User_When_Find_By_Acceleration_Name()
+        {
+            var userEsperado = _contextoFake.GetFakeData<Acceleration>()
+                .Where(x => x.Name == "Velvet Grass")
+                .Join(_contextoFake.GetFakeData<Candidate>(),
+                x => x.Id, y => y.UserId, (x, y) => y);
+        
+        }
+
+
         [Theory]
         [InlineData(1)]
         [InlineData(2)]

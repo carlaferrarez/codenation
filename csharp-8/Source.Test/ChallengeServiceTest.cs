@@ -6,27 +6,27 @@ using Codenation.Challenge.Services;
 
 namespace Codenation.Challenge
 {
-    public class UserServiceTest
+    public class ChallengeServiceTest
     {
-        [Theory]
-        [InlineData(1)]
-        [InlineData(2)]
-        [InlineData(3)]
-        public void Should_Return_Right_User_When_Find_By_Id(int id)
-        {
-            var fakeContext = new FakeContext("UserById");            
-            fakeContext.FillWith<User>();
+        //[Theory]
+        //[InlineData(1)]
+        //[InlineData(2)]
+        //[InlineData(3)]
+        //public void Should_Return_Right_Challenge_When_Find_By_Id(int accelerationId, int userId)
+        //{
+        //    var fakeContext = new FakeContext("ChallengeByAccelerationAndUserId");            
+        //    fakeContext.FillWith<Models.Challenge>();
 
-            using (var context = new CodenationContext(fakeContext.FakeOptions))
-            {
-                var expected = fakeContext.GetFakeData<User>().Find(x => x.Id == id);
+        //    using (var context = new CodenationContext(fakeContext.FakeOptions))
+        //    {
+        //        var expected = fakeContext.GetFakeData<Models.Acceleration>().Find(x => x.Id == accelerationId && );
 
-                var service = new UserService(context);                
-                var actual = service.FindById(id);
+        //        var service = new ChallengeService(context);                
+        //        var actual = service.FindByAccelerationIdAndUserId(accelerationId, userId);
 
-                Assert.Equal(expected, actual, new UserIdComparer());
-            }
-        }
+        //        Assert.Equal(expected, actual, new ChallengeIdComparer());
+        //    }
+        //}
   
         [Fact]
         public void Should_Add_New_User_When_Save()

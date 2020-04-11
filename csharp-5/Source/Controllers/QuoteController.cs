@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using Codenation.Challenge.Models;
 using Codenation.Challenge.Services;
@@ -21,14 +22,40 @@ namespace Codenation.Challenge.Controllers
         [HttpGet]
         public ActionResult<QuoteView> GetAnyQuote()
         {
-            return NotFound();
+            var quote = _service.GetAnyQuote();
+
+            if (quote != null)
+            {
+                var getJsonResponse = new QuoteView()
+                {
+                    Id = quote.Id,
+                    Actor = quote.Actor,
+                    Detail = quote.Detail
+                };
+                return getJsonResponse;
+            }
+            else
+                return NotFound();
         }
 
         // GET api/quote/{actor}
         [HttpGet("{actor}")]
         public ActionResult<QuoteView> GetAnyQuote(string actor)
         {
-            return NotFound();
+            var quotebyactor = _service.GetAnyQuote(actor);
+
+            if (quotebyactor != null)
+            {
+                var getJsonResponse = new QuoteView()
+                {
+                    Id = quotebyactor.Id,
+                    Actor = quotebyactor.Actor,
+                    Detail = quotebyactor.Detail
+                };
+                return getJsonResponse;
+            }
+            else
+                return NotFound();
         }
 
     }
