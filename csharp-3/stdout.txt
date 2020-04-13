@@ -5,29 +5,9 @@ Copyright (c) Microsoft Corporation.  All rights reserved.
 Starting test execution, please wait...
 
 A total of 1 test files matched the specified pattern.
-Amazonas
-Para
-Mato Grosso
-Minas Gerais
-Bahia
-Mato Grosso do Sul
-Goias
-Maranhao
-Rio Grande do Sul
-Tocantins
-Amazonas
-Para
-Mato Grosso
-Minas Gerais
-Bahia
-Mato Grosso do Sul
-Goias
-Maranhao
-Rio Grande do Sul
-Tocantins
 Results File: C:\Users\Carla\codenation\csharp-3\Source.TestSubmission\results.xml
 
 Test Run Successful.
 Total tests: 2
      Passed: 2
- Total time: 3.2274 Seconds
+ Total time: 3.7357 Seconds

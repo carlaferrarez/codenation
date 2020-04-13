@@ -10,4 +10,4 @@ Results File: C:\Users\Carla\codenation\csharp-1\Source.TestSubmission\results.x
 Test Run Successful.
 Total tests: 25
      Passed: 25
- Total time: 3.5025 Seconds
+ Total time: 3.9057 Seconds

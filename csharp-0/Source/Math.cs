@@ -29,34 +29,10 @@ namespace Codenation.Challenge
             double primeiroTeste = System.Math.Sqrt((5 * System.Math.Pow(numberToTest, 2)) + 4);
             double segundoTeste = System.Math.Sqrt((5 * System.Math.Pow(numberToTest, 2)) - 4);
 
-
-
             if ((primeiroTeste % 1) == 0 || (segundoTeste % 1) == 0)
-
-            {
                 return true;
-            }
-
-            else 
+            return false;
             
-            {
-                return false;
-            
-            }
-
-        }
-
-        static void Main() // Se habilitar o Main, colocar STATIC nas funções :)
-        {
-            //List<int> listaUm = Fibonacci();
-            //foreach (int item in listaUm)
-            //{
-            //    // Do something with item
-            //    Console.WriteLine("Fibonacci list:" + item);
-            //}
-
-            //bool tester = IsFibonacci(233);
-            //Console.WriteLine("2 É um número Fibonacci?" + tester);
 
         }
 

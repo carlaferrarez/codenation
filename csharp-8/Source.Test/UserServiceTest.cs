@@ -23,14 +23,41 @@ namespace Codenation.Challenge
         
         }
 
-        [Fact]
-        public void Should_Return_Right_User_When_Find_By_Acceleration_Name()
+        [Theory]
+        [InlineData("Velvet Grass")]
+        [InlineData("Progesterone")]
+        [InlineData("Temazepam")]
+
+        public void Should_Return_Right_User_When_Find_By_Acceleration_Name(string name)
         {
+            _contextoFake.FillWithAll();
+
             var userEsperado = _contextoFake.GetFakeData<Acceleration>()
-                .Where(x => x.Name == "Velvet Grass")
-                .Join(_contextoFake.GetFakeData<Candidate>(),
-                x => x.Id, y => y.UserId, (x, y) => y);
-        
+                .Find(x => x.Name == name);
+
+            var userReal = _userService.FindByAccelerationName(userEsperado.Name).ToList();
+
+            Assert.Equal(userEsperado.Id, userReal.FirstOrDefault().Id);
+
+        }
+
+
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        [InlineData(3)]
+
+        public void Should_Return_Right_User_When_Find_By_Company_Id(int companyId)
+        {
+            _contextoFake.FillWithAll();
+
+            var userEsperado = _contextoFake.GetFakeData<Company>()
+                .Find(x => x.Id == companyId);
+
+            var userReal = _userService.FindByCompanyId(userEsperado.Id).ToList();
+
+            Assert.Equal(userEsperado.Id, userReal.FirstOrDefault().Id);
+
         }
 
 
