@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Xunit;
 using Codenation.Challenge.Models;
 using Codenation.Challenge.Services;
+using System.Linq;
 
 namespace Codenation.Challenge
 {
@@ -22,28 +23,35 @@ namespace Codenation.Challenge
 
         }
 
-        //[Theory]
-        //[InlineData(1,1)]
-        //[InlineData(2,2)]
-        //[InlineData(3,3)]
+        [Theory]
+        [InlineData(1, 1)]
+        [InlineData(2, 2)]
+        [InlineData(3, 3)]
 
-        //public void Should_Return_Right_Challenge_When_Find_By_Id(int accelerationId, int userId)
-        //{
-        //    _contextoFake.FillWithAll();
+        public void Should_Return_Right_Challenge_When_Find_By_Id(int accelerationId, int userId)
+        {
+            _contextoFake.FillWithAll();
 
-        //    var challengeEsperado = _contextoFake.GetFakeData<Models.Candidate>()
-        //        .Find(x => x.AccelerationId == accelerationId && x.UserId == userId);
+            var userEsperado = _contextoFake.GetFakeData<Candidate>()
+                .Find(x => x.UserId == userId);
 
-        //    var accelerationEsperado = _contextoFake.GetFakeData<Models.Candidate>()
-        //         .Find(x => x.AccelerationId == accelerationId);
-        //    var userEsperado = _contextoFake.GetFakeData<Models.Candidate>()
-        //        .Find(x = x.UserId == userId);
+            // seleciona candidato por accelerationId e userId
+            var candidateEsperado = _contextoFake.GetFakeData<Candidate>()
+                 .Find(x => x.AccelerationId == accelerationId && x.UserId == userId);
 
-        //    var challengeReal = _challengeService.FindByAccelerationIdAndUserId(accelerationEsperado, userEsperado).ToList();
+            // seleciona a aceleração de acordo com o que achamos anteriormente
+            var accelerationEsperado = _contextoFake.GetFakeData<Acceleration>()
+                 .Find(x => x.Id == candidateEsperado.AccelerationId);
 
-        //    Assert.Equal(challengeEsperado., accelerationReal.FirstOrDefault().Id);
+            // seleciona challenge de acordo com o que achamos anteriormente
+            var challengeEsperado = _contextoFake.GetFakeData<Models.Challenge>()
+                .Find(x => x.Id == accelerationEsperado.ChallengeId);
 
-        //}
+            var challengeReal = _challengeService.FindByAccelerationIdAndUserId(accelerationEsperado.Id, userEsperado.UserId);
+
+             Assert.Equal(challengeEsperado.Id, challengeReal.FirstOrDefault().Id);
+
+        }
 
 
         [Fact]

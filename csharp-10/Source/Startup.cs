@@ -37,7 +37,7 @@ namespace Source
         {
             services.AddMvcCore()
                 .AddAuthorization( opt => {
-                    // add policies here
+                    opt.AddPolicy("Admin", policy => policy.RequireClaim(ClaimTypes.Email, "tegglestone9@blog.com"));
                 })
                 .AddJsonFormatters();    
            

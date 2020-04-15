@@ -8,15 +8,33 @@ namespace Codenation.Challenge.Services
 {
     public class PasswordValidatorService: IResourceOwnerPasswordValidator
     {
+        private CodenationContext _context;
         public PasswordValidatorService(CodenationContext dbContext)
-        {            
+        {
+            _context = dbContext;
         }
 
         public Task ValidateAsync(ResourceOwnerPasswordValidationContext context)
-        {          
-            context.Result = new GrantValidationResult(
-                TokenRequestErrors.InvalidGrant, "Invalid username or password");
-            return Task.CompletedTask;
+        {
+            var user = _context.Users.FirstOrDefault(x => x.FullName == context.UserName);
+
+            if (user != null && user.Password.TrimEnd() == context.Password)
+            {
+                context.Result = new GrantValidationResult(
+                    subject: user.ToString(),
+                    authenticationMethod: "custom",
+                    claims: UserProfileService.GetUserClaims(user)
+                    );
+                return Task.CompletedTask;
+            }
+            else
+            {
+                context.Result = new GrantValidationResult(
+                    TokenRequestErrors.InvalidGrant, "Invalid username or password");
+                return Task.FromResult(context.Result);
+
+            }
+
         }
      
     }

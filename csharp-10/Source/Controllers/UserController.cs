@@ -7,9 +7,12 @@ using Codenation.Challenge.Models;
 using Codenation.Challenge.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
+using IdentityModel.Client;
+using System.Threading.Tasks;
 
 namespace Codenation.Challenge.Controllers
 {
+    [Authorize("Admin")]
     [Route("api/[controller]")]    
     [ApiController]
     public class UserController : ControllerBase
@@ -54,7 +57,28 @@ namespace Codenation.Challenge.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             return Ok(mapper.Map<UserDTO>(service.Save(mapper.Map<User>(value))));
-        }   
+        }
+
+        [HttpGet("GetToken")]
+
+        public async Task<ActionResult<TokenResponse>> GetToken([FromBody]TokenDTO value)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var disco = await DiscoveryClient.GetAsync("hhtp://localhost:5000");
+
+            var tokenClient = new TokenClient(disco.TokenEndpoint, "codenation.api_client", "codenation.api_secret");
+            var tokenResponse = await tokenClient.RequestResourceOwnerPasswordAsync(value.UserName, value.Password, "codenation");
+
+            if (!tokenResponse.IsError)
+                return Ok(tokenResponse);
+
+            return Unauthorized(tokenResponse.ErrorDescription); 
+
+        }
+
+
      
     }
 }
