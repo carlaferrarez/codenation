@@ -16,7 +16,7 @@ namespace Codenation.Challenge.Services
 
         public Task ValidateAsync(ResourceOwnerPasswordValidationContext context)
         {
-            var user = _context.Users.FirstOrDefault(x => x.FullName == context.UserName);
+            var user = _context.Users.FirstOrDefault(x => x.Email == context.UserName);
 
             if (user != null && user.Password.TrimEnd() == context.Password)
             {

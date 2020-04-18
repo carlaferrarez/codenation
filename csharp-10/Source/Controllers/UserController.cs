@@ -59,6 +59,7 @@ namespace Codenation.Challenge.Controllers
             return Ok(mapper.Map<UserDTO>(service.Save(mapper.Map<User>(value))));
         }
 
+
         [HttpGet("GetToken")]
 
         public async Task<ActionResult<TokenResponse>> GetToken([FromBody]TokenDTO value)
@@ -66,7 +67,7 @@ namespace Codenation.Challenge.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            var disco = await DiscoveryClient.GetAsync("hhtp://localhost:5000");
+            var disco = await DiscoveryClient.GetAsync("http://localhost:5000");
 
             var tokenClient = new TokenClient(disco.TokenEndpoint, "codenation.api_client", "codenation.api_secret");
             var tokenResponse = await tokenClient.RequestResourceOwnerPasswordAsync(value.UserName, value.Password, "codenation");

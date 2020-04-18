@@ -1,100 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<testsuites time="4.926" tests="27" failures="18">
-  <testsuite id="0" name="Source.TestSubmission.dll" tests="27" failures="18" time="4.926">
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(userId: 3)" time="2.0380000">
-      <error message="System.Net.Http.HttpRequestException : Response status code does not indicate success: 400 (Bad Request).">   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
-   at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 62
-   at Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(Int32 userId) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 170</error>
-    </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(userId: 5)" time="0.2750000">
-      <error message="System.Net.Http.HttpRequestException : Response status code does not indicate success: 400 (Bad Request).">   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
-   at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 62
-   at Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(Int32 userId) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 170</error>
-    </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(userId: 1)" time="0.1430000">
-      <error message="System.Net.Http.HttpRequestException : Response status code does not indicate success: 400 (Bad Request).">   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
-   at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 62
-   at Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(Int32 userId) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 170</error>
-    </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(userId: 9)" time="0.2200000">
-      <error message="System.Net.Http.HttpRequestException : Response status code does not indicate success: 400 (Bad Request).">   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
-   at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 62
-   at Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(Int32 userId) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 170</error>
-    </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(userId: 7)" time="0.0990000">
-      <error message="System.Net.Http.HttpRequestException : Response status code does not indicate success: 400 (Bad Request).">   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
-   at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 62
-   at Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(Int32 userId) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 170</error>
-    </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Has_Authorize_Attribute_On_Controller(controller: &quot;CandidateController&quot;)" time="0.0520000" />
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Has_Authorize_Attribute_On_Controller(controller: &quot;AccelerationController&quot;)" time="0.0230000" />
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Has_Authorize_Attribute_On_Controller(controller: &quot;CompanyController&quot;)" time="0.0200000" />
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Has_Authorize_Attribute_On_Controller(controller: &quot;SubmissionController&quot;)" time="0.0350000">
-      <error message="Assert.Contains() Failure&#xD;&#xA;Not found: AuthorizeAttribute&#xD;&#xA;In value:  List&lt;String&gt; [&quot;RouteAttribute&quot;, &quot;ApiControllerAttribute&quot;]">   at Codenation.Challenge.AuthenticationTest.Should_Has_Authorize_Attribute_On_Controller(String controller) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 76</error>
-    </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Has_Authorize_Attribute_On_Controller(controller: &quot;UserController&quot;)" time="0.0410000" />
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_User_Be_Authorized_On_Endpoint_With_Token(userId: 3, endpoint: &quot;/api/acceleration&quot;)" time="0.1060000">
-      <error message="System.Net.Http.HttpRequestException : Response status code does not indicate success: 400 (Bad Request).">   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
-   at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 62
-   at Codenation.Challenge.AuthenticationTest.Should_User_Be_Authorized_On_Endpoint_With_Token(Int32 userId, String endpoint) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 132</error>
-    </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_User_Be_Authorized_On_Endpoint_With_Token(userId: 7, endpoint: &quot;/api/submission&quot;)" time="0.1020000">
-      <error message="System.Net.Http.HttpRequestException : Response status code does not indicate success: 400 (Bad Request).">   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
-   at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 62
-   at Codenation.Challenge.AuthenticationTest.Should_User_Be_Authorized_On_Endpoint_With_Token(Int32 userId, String endpoint) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 132</error>
-    </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_User_Be_Authorized_On_Endpoint_With_Token(userId: 5, endpoint: &quot;/api/candidate&quot;)" time="0.1050000">
-      <error message="System.Net.Http.HttpRequestException : Response status code does not indicate success: 400 (Bad Request).">   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
-   at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 62
-   at Codenation.Challenge.AuthenticationTest.Should_User_Be_Authorized_On_Endpoint_With_Token(Int32 userId, String endpoint) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 132</error>
-    </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_User_Be_Authorized_On_Endpoint_With_Token(userId: 1, endpoint: &quot;/api/company&quot;)" time="0.1010000">
-      <error message="System.Net.Http.HttpRequestException : Response status code does not indicate success: 400 (Bad Request).">   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
-   at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 62
-   at Codenation.Challenge.AuthenticationTest.Should_User_Be_Authorized_On_Endpoint_With_Token(Int32 userId, String endpoint) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 132</error>
-    </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Admin_Be_Authorized_On_Route_User" time="0.1400000">
-      <error message="System.Net.Http.HttpRequestException : Response status code does not indicate success: 400 (Bad Request).">   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
-   at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 62
-   at Codenation.Challenge.AuthenticationTest.Should_Admin_Be_Authorized_On_Route_User() in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 148</error>
-    </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Route_Be_Not_Authorized_When_Call_With_No_Token(endpoint: &quot;/api/candidate&quot;)" time="0.2680000" />
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Route_Be_Not_Authorized_When_Call_With_No_Token(endpoint: &quot;/api/submission&quot;)" time="0.3850000">
-      <error message="Assert.Equal() Failure&#xD;&#xA;Expected: Unauthorized&#xD;&#xA;Actual:   NoContent">   at Codenation.Challenge.AuthenticationTest.Should_Route_Be_Not_Authorized_When_Call_With_No_Token(String endpoint) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 89</error>
-    </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Route_Be_Not_Authorized_When_Call_With_No_Token(endpoint: &quot;/api/acceleration&quot;)" time="0.0370000" />
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Route_Be_Not_Authorized_When_Call_With_No_Token(endpoint: &quot;/api/user&quot;)" time="0.0320000" />
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Route_Be_Not_Authorized_When_Call_With_No_Token(endpoint: &quot;/api/company&quot;)" time="0.0560000" />
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(userId: 1)" time="0.1070000">
-      <error message="System.Net.Http.HttpRequestException : Response status code does not indicate success: 400 (Bad Request).">   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
-   at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 62
-   at Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(Int32 userId) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 113</error>
-    </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(userId: 7)" time="0.0940000">
-      <error message="System.Net.Http.HttpRequestException : Response status code does not indicate success: 400 (Bad Request).">   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
-   at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 62
-   at Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(Int32 userId) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 113</error>
-    </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(userId: 5)" time="0.0930000">
-      <error message="System.Net.Http.HttpRequestException : Response status code does not indicate success: 400 (Bad Request).">   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
-   at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 62
-   at Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(Int32 userId) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 113</error>
-    </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(userId: 10)" time="0.1100000">
-      <error message="System.Net.Http.HttpRequestException : Response status code does not indicate success: 400 (Bad Request).">   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
-   at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 62
-   at Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(Int32 userId) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 113</error>
-    </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(userId: 3)" time="0.0900000">
-      <error message="System.Net.Http.HttpRequestException : Response status code does not indicate success: 400 (Bad Request).">   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
-   at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 62
-   at Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(Int32 userId) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 113</error>
-    </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(userId: 9)" time="0.0970000">
-      <error message="System.Net.Http.HttpRequestException : Response status code does not indicate success: 400 (Bad Request).">   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
-   at Codenation.Challenge.AuthenticationTest.GetToken(String email, String password) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 62
-   at Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(Int32 userId) in C:\Users\Carla\codenation\csharp-10\Source.TestSubmission\AuthenticationTest.cs:line 113</error>
-    </testcase>
-    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Challenge_Route_Be_Authorized_When_Call_With_No_Token" time="0.0570000" />
+<testsuites time="15.168" tests="27" failures="0">
+  <testsuite id="0" name="Source.TestSubmission.dll" tests="27" failures="0" time="15.168">
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(userId: 3)" time="8.4780000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(userId: 5)" time="0.4080000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(userId: 1)" time="0.2670000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(userId: 9)" time="0.2790000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Non_Admin_User_Be_Not_Authorized_On_Route_User(userId: 7)" time="0.3120000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Has_Authorize_Attribute_On_Controller(controller: &quot;CandidateController&quot;)" time="0.0460000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Has_Authorize_Attribute_On_Controller(controller: &quot;AccelerationController&quot;)" time="0.0420000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Has_Authorize_Attribute_On_Controller(controller: &quot;CompanyController&quot;)" time="0.0340000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Has_Authorize_Attribute_On_Controller(controller: &quot;SubmissionController&quot;)" time="0.0330000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Has_Authorize_Attribute_On_Controller(controller: &quot;UserController&quot;)" time="0.0310000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_User_Be_Authorized_On_Endpoint_With_Token(userId: 3, endpoint: &quot;/api/acceleration&quot;)" time="1.1860000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_User_Be_Authorized_On_Endpoint_With_Token(userId: 7, endpoint: &quot;/api/submission&quot;)" time="0.2870000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_User_Be_Authorized_On_Endpoint_With_Token(userId: 5, endpoint: &quot;/api/candidate&quot;)" time="0.4210000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_User_Be_Authorized_On_Endpoint_With_Token(userId: 1, endpoint: &quot;/api/company&quot;)" time="0.3070000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Admin_Be_Authorized_On_Route_User" time="0.6840000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Route_Be_Not_Authorized_When_Call_With_No_Token(endpoint: &quot;/api/candidate&quot;)" time="0.1520000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Route_Be_Not_Authorized_When_Call_With_No_Token(endpoint: &quot;/api/submission&quot;)" time="0.0530000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Route_Be_Not_Authorized_When_Call_With_No_Token(endpoint: &quot;/api/acceleration&quot;)" time="0.0500000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Route_Be_Not_Authorized_When_Call_With_No_Token(endpoint: &quot;/api/user&quot;)" time="0.0650000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Route_Be_Not_Authorized_When_Call_With_No_Token(endpoint: &quot;/api/company&quot;)" time="0.1060000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(userId: 1)" time="0.2850000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(userId: 7)" time="0.2680000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(userId: 5)" time="0.3980000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(userId: 10)" time="0.2770000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(userId: 3)" time="0.3270000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Be_Generate_A_Valid_Token(userId: 9)" time="0.2780000" />
+    <testcase classname="Codenation.Challenge.AuthenticationTest" name="Codenation.Challenge.AuthenticationTest.Should_Challenge_Route_Be_Authorized_When_Call_With_No_Token" time="0.0940000" />
   </testsuite>
 </testsuites>

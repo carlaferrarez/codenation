@@ -56,12 +56,20 @@ namespace Codenation.Challenge
             return JsonConvert.DeserializeObject<List<T>>(content);
         }
 
+        #region User Service Mock
         public Mock<IUserService> FakeUserService()
         {
             var service = new Mock<IUserService>();
             
             service.Setup(x => x.FindById(It.IsAny<int>())).
                 Returns((int id) => Get<User>().FirstOrDefault(x => x.Id == id));
+
+            var candidate = Get<Candidate>();
+
+            service.Setup(x => x.FindByCompanyId(It.IsAny<int>())).
+                Returns((int companyId) => candidate.Where(x => x.CompanyId == companyId).ToList());
+
+
 
             service.Setup(x => x.Save(It.IsAny<User>())).
                 Returns((User user) => {
@@ -73,5 +81,7 @@ namespace Codenation.Challenge
             return service;
         }
 
-    }    
+        #endregion
+
+    }
 }
